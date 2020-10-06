@@ -13,14 +13,14 @@
     <a-scene>
         <a-camera position="0 2 4"></a-camera>
 
-        <a-light type="point" color="yellow"  intensity="0.75" distance="10" decay="2" position="3 3 0" position="0 0 -1"></a-light>
+        <a-light type="point" color="#FAD6A5"  intensity="0.75" distance="10" decay="2" position="3 3 0" position="0 0 -1"></a-light>
         <a-light type="point" color="#6fb4f9" intensity="0.75" distance="10" decay="2" position="-3 3 0" position="0 0 -1"></a-light>
 
         <a-assets>
             <img id = "tierraTextura" src="assets/textures/tierra.jpg">
             <img id = "ground" src="assets/textures/cesped.jpg">
             <img id = "normalCesped" src="assets/textures/normalcesped.jpg">
-            <img id = "skyTexture" src="assets/textures/sky.jpg">
+            <img id = "skyTexture" src="assets/textures/skyN.jpg">
         </a-assets>
 
         <a-plane src="#ground" material="normalMap:#normalCesped; normalTextureRepeat:5 5" height="10" width="10" rotation="-90 0 0" repeat="5 5"></a-plane>
