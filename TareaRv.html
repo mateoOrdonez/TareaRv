@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Taller</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-camera position="0 2 4"></a-camera>
+
+        <a-light type="point" color="yellow"  intensity="0.75" distance="10" decay="2" position="3 3 0" position="0 0 -1"></a-light>
+        <a-light type="point" color="#6fb4f9" intensity="0.75" distance="10" decay="2" position="-3 3 0" position="0 0 -1"></a-light>
+
+        <a-assets>
+            <img id = "tierraTextura" src="assets/textures/tierra.jpg">
+            <img id = "ground" src="assets/textures/cesped.jpg">
+            <img id = "normalCesped" src="assets/textures/normalcesped.jpg">
+            <img id = "skyTexture" src="assets/textures/sky.jpg">
+        </a-assets>
+
+        <a-plane src="#ground" material="normalMap:#normalCesped; normalTextureRepeat:5 5" height="10" width="10" rotation="-90 0 0" repeat="5 5"></a-plane>
+
+        <a-sphere src="#tierraTextura" radius="1" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 1 0"></a-sphere>
+
+        <a-sky src="#skyTexture"></a-sky>
+    </a-scene>
+    
+</body>
+</html>
